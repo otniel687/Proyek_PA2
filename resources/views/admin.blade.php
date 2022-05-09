@@ -24,7 +24,7 @@
       <!-- Sidebar -->
       <ul class="navbar-nav bg-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center bg-info" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center bg-info" href="{{asset('/admin')}}">
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fa-solid fa-user-large"></i>
           </div>
@@ -36,7 +36,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="{{asset('/admin')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a
           >
@@ -59,14 +59,14 @@
         <!-- Nav Item -Jadwal-->
         <li class="nav-item">
           <a class="nav-link" href="{{asset('/kendaraans')}}">
-            <i class="fa-solid fa-calendar-days"></i>
+            <i class="fa-solid fa-car"></i>
             <span>Kendaraan</span></a
           >
         </li>
 
         <!-- Nav Item -  Penumpang-->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/penumpangs')}}">
             <i class="fa-solid fa-clipboard-list"></i>
             <span>Penumpang</span></a
           >
@@ -80,15 +80,15 @@
           </a>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
+              <a class="collapse-item" href="{{asset('/beritas')}}">Berita</a>
+              <a class="collapse-item" href="{{asset('/informasis')}}">Pengumuman</a>
             </div>
           </div>
         </li>
 
         <!-- Nav Item - User -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/beritas')}}">
             <i class="fa-solid fa-users"></i>
             <span>Akun</span>
           </a>
@@ -96,17 +96,9 @@
 
         <!-- Nav Item - Galeri -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/beritas')}}">
             <i class="fa-solid fa-image"></i>
             <span>Galeri</span>
-          </a>
-        </li>
-
-        <!-- Nav Item -  Back Up-->
-        <li class="nav-item">
-          <a class="nav-link" href="charts.html">
-            <i class="fa-solid fa-cloud-arrow-down"></i>
-            <span>Back Up</span>
           </a>
         </li>
 

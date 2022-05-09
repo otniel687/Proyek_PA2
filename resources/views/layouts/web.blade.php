@@ -79,7 +79,7 @@
                   <a class="nav-link" href="{{asset('/galeri')}}">Galeri</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn btn-info" href="#">Masuk</a>
+                  <a class="nav-link btn btn-info" href="{{asset('/login')}}">Masuk</a>
                 </li>
               </ul>
             </div>

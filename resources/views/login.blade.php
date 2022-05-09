@@ -28,7 +28,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Login</h4></div>
+              <div class="card-header"><h2>MASUK</h2></div>
 
               <div class="card-body">
                 <form method="POST" action="{{url('proses_login')}}" method="POST" id="logForm"  class="needs-validation" >

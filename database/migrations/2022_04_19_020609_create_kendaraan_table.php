@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('kendaraans', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('tanggal');
+            $table->date('tanggal');
             $table->string('waktu');
             $table->string('nama');
             $table->string('jenis');

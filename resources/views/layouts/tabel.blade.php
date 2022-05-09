@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>@yield('title')</title>
-    <!-- Font Awesome -->
-    <link href="{{asset('../vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@yield('title')</title>
 
-    <!-- Custom styles for this template -->
-    <link href="{{asset('../css/sb-admin-2.min.css')}}" rel="stylesheet" />
-
-    <!-- Custom styles for this page -->
-    {{-- <link href="{{asset('../vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" /> --}}
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"> --}}
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{asset('../assets/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{asset('../assets/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{asset('../assets/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" >
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.bootstrap5.min.css"> --}}
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-  </head>
-  <body id="page-top">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  {{-- <link rel="stylesheet" href="{{asset('../assets/css/all.min.css')}}"> --}}
+  <link href="{{asset('../vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('../assets/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  <!-- Theme style -->
+  {{-- <link rel="stylesheet" href="{{asset('../assets/css/adminlte.min.css')}}"> --}}
+  <link href="{{asset('../css/sb-admin-2.min.css')}}" rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body class="hold-transition sidebar-mini page-top">
     <div id="wrapper">
       <!-- Sidebar -->
       <ul class="navbar-nav bg-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -67,7 +59,7 @@
         <!-- Nav Item -Jadwal-->
         <li class="nav-item">
           <a class="nav-link" href="{{asset('/kendaraans')}}">
-              <i class="fa-solid fa-car"></i>
+            <i class="fa-solid fa-car"></i>
             <span>Kendaraan</span></a
           >
         </li>
@@ -104,7 +96,7 @@
 
         <!-- Nav Item - Galeri -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/galeris')}}">
             <i class="fa-solid fa-image"></i>
             <span>Galeri</span>
           </a>
@@ -153,7 +145,31 @@
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">@yield('judul')</h1>
             </div>
-            @yield('content')
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            @yield('content')
+                            <table id="example1" class="table table-bordered table-striped">
+                                
+                                @yield('tabel')
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+    <!-- /.content -->
           </div>
           <!-- /.container-fluid -->
         </div>
@@ -197,58 +213,44 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="{{asset('../assets/jquery/jquery.min.js')}}"></script>
-    <!-- Bootstrap 4 -->
-    <script src="{{asset('../assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  
-    <!-- DataTables  & Plugins -->
-    <script src="{{asset('../assets/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('../assets/jszip/jszip.min.js')}}"></script>
-    <script src="{{asset('../assets/pdfmake/pdfmake.min.js')}}"></script>
-    <script src="{{asset('../assets/pdfmake/vfs_fonts.js')}}"></script>
-    <script src="{{asset('../assets/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-buttons/js/buttons.print.min.js')}}"></script>
-    <script src="{{asset('../assets/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
-
-    <script>
-      $(function () {
-        $("#data").DataTable({
-          "responsive": true, "lengthChange": false, "autoWidth": false,
-          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#data_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false,
-          "responsive": true,
-        });
-      });
-    </script>
-    
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('../vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('../vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{{asset('../vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{{asset('../js/sb-admin-2.min.js')}}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{{asset('../vendor/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('../vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{asset('../js/demo/datatables-demo.js')}}"></script>
-  </body>
+<!-- jQuery -->
+<script src="{{asset('../assets/jquery/jquery.min.js')}}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{asset('../assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- DataTables  & Plugins -->
+<script src="{{asset('../assets/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('../assets/jszip/jszip.min.js')}}"></script>
+<script src="{{asset('../assets/pdfmake/pdfmake.min.js')}}"></script>
+<script src="{{asset('../assets/pdfmake/vfs_fonts.js')}}"></script>
+<script src="{{asset('../assets/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('../assets/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
 </html>
