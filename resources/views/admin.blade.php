@@ -50,7 +50,7 @@
 
         <!-- Nav Item - Profil-->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/profiles')}}">
             <i class="fa-solid fa-circle-user"></i>
             <span>Profil</span>
           </a>
@@ -157,12 +157,29 @@
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Penumpang</div>
                         <div class="row no-gutters align-items-center">
                           <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50</div>
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $penumpang }}</div>
                           </div>
                         </div>
                       </div>
                       <div class="col-auto">
                         <i class="fa-solid fa-people-group fa-2x text-gray-300"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pending Requests Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-secondary shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Total Kendaraan</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $kendaraan }}</div>
+                      </div>
+                      <div class="col-auto">
+                        <i class="fa-solid fa-car fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -178,7 +195,7 @@
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Berita</div>
                         <div class="row no-gutters align-items-center">
                           <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">5</div>
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $berita }}</div>
                           </div>
                         </div>
                       </div>
@@ -197,27 +214,10 @@
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Pengumuman</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $informasi }}</div>
                       </div>
                       <div class="col-auto">
                         <i class="fa-solid fa-newspaper fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-secondary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Total Galeri</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa-solid fa-image fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>

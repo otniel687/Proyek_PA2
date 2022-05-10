@@ -9,6 +9,10 @@ use App\Http\Controllers\PenumpangController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\CountController;
+use App\Http\Controllers\AkunController;
+
+
 
 
 
@@ -27,6 +31,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('users', AkunController::class);
+
+
 Route::get('/berita', [PenggunaController::class,'berita']);
 Route::get('/pengumuman', [PenggunaController::class,'pengumuman']);
 Route::get('/tentang', [PenggunaController::class,'tentang']);
@@ -35,7 +42,6 @@ Route::get('/lokasi', [PenggunaController::class,'lokasi']);
 Route::get('/galeri', [PenggunaController::class,'galeri']);
 Route::get('/tabel', [PenggunaController::class,'tabel']);
 Route::get('/isi', [PenggunaController::class,'isi']);
-Route::get('/pesan', [PesanController::class,'index'])->name('pemesanan');
 Route::post('/booking', [PesanController::class,'store']);
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
 Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');
@@ -47,9 +53,10 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout')->name('logout
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cek_login:admin']], function () {
-        Route::get('/admin', function () {
-            return view('admin');
-        });
+        // Route::get('/admin', function () {
+        //     return view('admin');
+        // });
+        Route::get('/admin', [CountController::class,'index']);
         Route::resource('penumpangs', PenumpangController::class);
         Route::resource('profiles', ProfileController::class);
         Route::resource('galeris', GaleriController::class);
@@ -58,7 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('beritas', BeritaController::class);
     });
     Route::group(['middleware' => ['cek_login:pelanggan']], function () {
-
+        Route::get('/pesan', [PesanController::class,'index'])->name('pemesanan');
     });
     Route::group(['middleware' => ['cek_login:mekanik']], function () {
         

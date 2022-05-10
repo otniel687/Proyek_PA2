@@ -19,7 +19,7 @@
    
     <div class="card shadow p-4">
             <div class="table-responsive">
-                <table id="example1" class="table table-bordered table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                     <th>No</th>

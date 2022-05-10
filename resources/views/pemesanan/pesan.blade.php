@@ -164,7 +164,11 @@
                 console.log($("#jenis option:selected").val());
                 if ($("#jenis option:selected").val() == 'Tidak Berkendara') {
                     $('#no_polisi').prop('hidden', 'true');
-                } else {
+                } else if ($("#jenis option:selected").val() == 'Gol I (Sepeda Dayung)'){
+                    $('#no_polisi').prop('hidden', 'true');
+                }else if ($("#jenis option:selected").val() == ''){
+                    $('#no_polisi').prop('hidden', 'true');
+                }else {
                     $('#no_polisi').prop('hidden', false);
                 }
             });
