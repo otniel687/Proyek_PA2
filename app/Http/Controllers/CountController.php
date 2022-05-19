@@ -20,4 +20,14 @@ class CountController extends Controller
         // $penumpang = DB:table('penumpangs')->count();
         return view('admin', compact('penumpang', 'kendaraan', 'berita', 'informasi'));
     }
+
+    public function petugas(){
+        $penumpang = Penumpang::count();
+        $kendaraan = Kendaraan::count();
+        $berita = Berita::count();
+        $informasi = Informasi::count();
+        // $penumpang = Penumpang::where('id',$id)->count();
+        // $penumpang = DB:table('penumpangs')->count();
+        return view('petugass', compact('penumpang', 'kendaraan', 'berita', 'informasi'));
+    }
 }

@@ -96,7 +96,7 @@
 
         <!-- Nav Item - User -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="{{asset('/users')}}">
             <i class="fa-solid fa-users"></i>
             <span>Akun</span>
           </a>
@@ -107,6 +107,22 @@
           <a class="nav-link" href="{{asset('/galeris')}}">
             <i class="fa-solid fa-image"></i>
             <span>Galeri</span>
+          </a>
+        </li>
+
+        <!-- Nav Item - Pengunjung -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{asset('/')}}">
+            <i class="fa-solid fa-image"></i>
+            <span>Halaman pengunjung</span>
+          </a>
+        </li>
+
+        <!-- Nav Item - Pengunjung -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{asset('/')}}">
+            <i class="fa-solid fa-house"></i>
+            <span>Halaman pengunjung</span>
           </a>
         </li>
 
@@ -199,6 +215,9 @@
 
     <!-- jQuery -->
     <script src="{{asset('../assets/jquery/jquery.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
     <!-- Bootstrap 4 -->
     <script src="{{asset('../assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   
@@ -233,7 +252,22 @@
         });
       });
     </script>
-    
+    <script type='text/javascript'>
+        $(window).load(function(){
+            $("#jenis").change(function() {
+                console.log($("#jenis option:selected").val());
+                if ($("#jenis option:selected").val() == 'Tidak Berkendara') {
+                    $('#no_polisi').prop('hidden', 'true');
+                } else if ($("#jenis option:selected").val() == 'Gol I (Sepeda Dayung)'){
+                    $('#no_polisi').prop('hidden', 'true');
+                }else if ($("#jenis option:selected").val() == ''){
+                    $('#no_polisi').prop('hidden', 'true');
+                }else {
+                    $('#no_polisi').prop('hidden', false);
+                }
+            });
+        });
+        </script>
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('../vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('../vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

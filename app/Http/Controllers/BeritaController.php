@@ -14,9 +14,13 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $data['beritas'] = Berita::orderBy('id','desc')->paginate(5);
-    
-        return view('beritas.index', $data);
+
+        $data['beritas'] = Berita::orderBy('id','desc')->simplePaginate(5);
+
+        // return view('beritas.index', ['data'=>$data])->with('i',(request()->input('page',1) - 1) * 5);
+
+        return view('beritas.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**
@@ -40,7 +44,7 @@ class BeritaController extends Controller
         $request->validate([
             'title' => 'required',
             'tgl_berita' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             'description' => 'required',
         ]);
         $path = $request->file('image')->store('public/images');
@@ -95,7 +99,7 @@ class BeritaController extends Controller
         $berita = Berita::find($id);
         if($request->hasFile('image')){
             $request->validate([
-              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             ]);
             $path = $request->file('image')->store('public/images');
             $berita->image = $path;

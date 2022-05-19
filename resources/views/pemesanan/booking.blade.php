@@ -1,49 +1,22 @@
-@extends('layouts.adm')
+@extends('layouts.web')
+@section('title', 'Booking | Pelabuhan Mulia Raja Napitupulu')
+@section('breadcrumb', 'Booking')
+@section('judul', 'Pesan')
 @section('content')
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            form{
-                margin: 50px auto;
-            }
-
-            .form-row{
-                margin-top: 10px;
-            }
-
-            legend
-            {
-                font-size:14px;
-                font-weight:bold;
-                margin-bottom: 0px; 
-                width: 35%; 
-                border: 1px solid #ddd;
-                border-radius: 4px; 
-                padding: 5px 5px 5px 10px; 
-                background-color: #ffffff;
-            }
-        </style>
-    </head>
-    <body>
-      @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-        <div class="">
+        <div class="container">
             <div class="row">
                 <div class="col"></div>
                 <div class="col-md-8">
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
                     <form action="/booking" method="POST">
                       @csrf
                       <div class="">
                           <fieldset>
-                          <legend>Data Pemesanan Tiket Online</legend>
+                          <legend>Data Pemesanan</legend>
                           <div class="form-row mb-5">
                               <div class="col-lg-9">
                                   <h2>PELABUHAN MULIA RAJA NAPITUPULU</h2>
@@ -59,7 +32,7 @@
                                   <div class="row mb-3">
                                       <div class="col-lg-6">
                                           <label for="">Tanggal</label>
-                                          <input type="date" class="form-control text-start" name="tanggal" value="">
+                                          <input type="date" class="form-control text-start datepicker" name="tanggal" value="">
                                       </div>
                                       <div class="col-lg-1"></div>
                                       <div class="col-lg-5">
@@ -111,22 +84,14 @@
 
                           <h4>Data Penumpang</h4>
                           <div id="dynamic_field">
-                              <div class="form-row" >
-                                  <div class="col">
-                                      <label for="">Nama</label>
-                                  </div>
-                                  <div class="col">
-                                      <label for="">Jenis Kelamin</label>
-                                  </div>
-                                  <div class="col">
-                                      <label for="">Umur</label>
-                                  </div>
-                                  <div class="col">
-                                      <label for="">Alamat</label>
-                                  </div>
-                                  <div class="col"></div>
-                              </div>
                               <table class="table" id="dynamicAddRemove">
+                                  <tr>
+                                      <td><label for="">Nama</label></td>
+                                      <td><label for="">Jenis Kelamin</label></td>
+                                      <td><label for="">Umur</label></td>
+                                      <td><label for="">Alamat</label></td>
+                                      <td></td>
+                                  </tr>
                                   <tr>
                                       <td><input type="text" name="addMoreInputFields[0][nama]" placeholder="Enter " class="form-control" />
                                       </td>
@@ -144,8 +109,16 @@
                                       <td><button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">Add </button></td>
                                   </tr>
                               </table>
-                              <button type="submit" class="btn btn-outline-success btn-block">Save</button>
-                          </fieldset>
+                                @if (Route::has('login'))
+                                    <div class="hidden fixed sm:block">
+                                    @auth
+                                        <button type="submit" class="submit btn btn-primary submit" name="submit" style="margin-right: 40px">SUBMIT</button>
+                                    @else
+                                        <button onClick="alert('Anda harus login terlebih dahulu!')" class="submit btn btn-primary submit"  style="margin-right: 40px">SUBMIT</button>
+                                    @endif
+                                    </div>
+                                @endif
+                            </fieldset>
                       </div>
                     </form>
                 </div>
@@ -188,8 +161,4 @@
                 $(this).parents('tr').remove();
             });
         </script>
-        
-
-    </body>
-</html>
 @endsection

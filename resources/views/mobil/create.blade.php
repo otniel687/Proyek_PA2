@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('kendaraans.index') }}"> Back</a>
+                        <a class="btn btn-primary" href="{{ route('mobil.index') }}"> Back</a>
                     </div>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                     </div>
                 @endif
                 
-                <form action="{{ route('kendaraans.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('mobil.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                 
                     
@@ -46,7 +46,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Jenis Kendaraan:</strong>
-                                    <select name="jenis" id="jenis" class="form-control">
+                                    <select name="jenis" class="form-control">
                                         <option value="">-Pilih-</option>
                                         <option value="Tidak Berkendara">Tidak Berkendara</option>
                                         <option value="Gol I (Sepeda Dayung)">Gol I (Sepeda Dayung)</option>
@@ -64,9 +64,9 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group" id="no_polisi" hidden>
+                                <div class="form-group">
                                     <strong>No Polisi:</strong>
-                                    <input type="text" name="no_polisi" class="form-control" placeholder="No. Polisi">
+                                    <input type="text" name="no_polisi" class="form-control" placeholder="Cost">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

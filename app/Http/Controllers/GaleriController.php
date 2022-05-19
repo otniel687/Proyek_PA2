@@ -14,9 +14,10 @@ class GaleriController extends Controller
      */
    public function index()
     {
-        $data['galeris'] = Galeri::orderBy('id','desc')->paginate(5);
+        $data['galeris'] = Galeri::orderBy('id','desc')->simplePaginate(5);
     
-        return view('galeris.index', $data);
+        return view('galeris.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**
@@ -39,7 +40,7 @@ class GaleriController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
         ]);
         $path = $request->file('image')->store('public/images');
         $galeri = new Galeri();
@@ -89,7 +90,7 @@ class GaleriController extends Controller
         $galeri = Galeri::find($id);
         if($request->hasFile('image')){
             $request->validate([
-              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             ]);
             $path = $request->file('image')->store('public/images');
             $galeri->image = $path;

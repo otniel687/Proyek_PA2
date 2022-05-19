@@ -28,7 +28,7 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fa-solid fa-user-large"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Admin</div>
+          <div class="sidebar-brand-text mx-3">Petugas</div>
         </a>
 
         <!-- Divider -->
@@ -36,7 +36,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-          <a class="nav-link" href="{{asset('/admin')}}">
+          <a class="nav-link" href="{{asset('/petugas')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a
           >
@@ -48,17 +48,9 @@
         <!-- Heading -->
         <div class="sidebar-heading">STARTER</div>
 
-        <!-- Nav Item - Profil-->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/profiles')}}">
-            <i class="fa-solid fa-circle-user"></i>
-            <span>Profil</span>
-          </a>
-        </li>
-
         <!-- Nav Item -Jadwal-->
         <li class="nav-item">
-          <a class="nav-link" href="{{asset('/kendaraans')}}">
+          <a class="nav-link" href="{{asset('/petugas_kendaraan')}}">
             <i class="fa-solid fa-car"></i>
             <span>Kendaraan</span></a
           >
@@ -66,40 +58,10 @@
 
         <!-- Nav Item -  Penumpang-->
         <li class="nav-item">
-          <a class="nav-link" href="{{asset('/penumpangs')}}">
+          <a class="nav-link" href="{{asset('/petugas')}}">
             <i class="fa-solid fa-clipboard-list"></i>
             <span>Penumpang</span></a
           >
-        </li>
-
-        <!-- Nav Item - Pages Informasi -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-newspaper"></i>
-            <span>Informasi</span>
-          </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="{{asset('/beritas')}}">Berita</a>
-              <a class="collapse-item" href="{{asset('/informasis')}}">Pengumuman</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - User -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/users')}}">
-            <i class="fa-solid fa-users"></i>
-            <span>Akun</span>
-          </a>
-        </li>
-
-        <!-- Nav Item - Galeri -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/galeris')}}">
-            <i class="fa-solid fa-image"></i>
-            <span>Galeri</span>
-          </a>
         </li>
 
         <!-- Nav Item - Pengunjung -->
@@ -188,44 +150,6 @@
                       </div>
                       <div class="col-auto">
                         <i class="fa-solid fa-car fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Berita</div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $berita }}</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa-solid fa-newspaper fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Pengumuman</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $informasi }}</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa-solid fa-newspaper fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>

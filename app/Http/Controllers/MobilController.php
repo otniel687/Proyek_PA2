@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Penumpang;
+use App\Models\Kendaraan;
 use Illuminate\Http\Request;
 
-class PenumpangController extends Controller
+class MobilController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $data['penumpangs'] = Penumpang::orderBy('id','desc')->simplePaginate(5);
+        $data['kendaraans'] = Kendaraan::orderBy('id','desc')->simplePaginate(5);
     
-        return view('penumpangs.index', $data)
+        return view('mobil.index', $data)
             ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class PenumpangController extends Controller
      */
     public function create()
     {
-        return view('penumpangs.create');
+        return view('mobil.create');
     }
 
     /**
@@ -39,16 +39,17 @@ class PenumpangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'tanggal' => 'required',
+            'waktu' => 'required',
             'nama' => 'required',
-            'jk' => 'required',
-            'umur' => 'required',
-            'alamat' => 'required'
+            'jenis' => 'required',
+            'no_polisi' => 'required'
         ]);
 
-        Penumpang::create($request->all());
+        Kendaraan::create($request->all());
 
-        return redirect()->route('penumpangs.index')
-            ->with('success', 'Penumpang created successfully.');
+        return redirect()->route('mobil.index')
+            ->with('success', 'Kendaraan created successfully.');
     }
 
     /**
@@ -57,9 +58,9 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Penumpang $penumpang)
+    public function show(Kendaraan $kendaraan)
     {
-        return view('penumpangs.show', compact('penumpang'));
+        return view('mobil.show', compact('kendaraan'));
     }
 
     /**
@@ -68,9 +69,10 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Penumpang $penumpang)
+    public function edit(Kendaraan $kendaraan, $id)
     {
-        return view('penumpangs.edit', compact('penumpang'));
+        $kendaraan = Kendaraan::find($id);
+        return view('mobil.edit', compact('kendaraan'));
     }
 
     /**
@@ -80,18 +82,19 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Penumpang $penumpang)
+    public function update(Request $request, Kendaraan $kendaraan)
     {
         $request->validate([
-           'nama' => 'required',
-            'jk' => 'required',
-            'umur' => 'required',
-            'alamat' => 'required'
+            'tanggal',
+            'waktu' => 'required',
+            'nama' => 'required',
+            'jenis' => 'required',
+            'no_polisi' => 'required'
         ]);
-        $penumpang->update($request->all());
+        $kendaraan->update($request->all());
 
-        return redirect()->route('penumpangs.index')
-            ->with('success', 'Penumpang updated successfully');
+        return redirect()->route('mobil.index')
+            ->with('success', 'Kendaraan updated successfully');
     }
 
     /**
@@ -100,11 +103,12 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Penumpang $penumpang)
+    public function destroy(Kendaraan $kendaraan, $id)
     {
-        $penumpang->delete();
+        $kendaraan = Kendaraan::find($id);
+        $kendaraan->delete();
 
-        return redirect()->route('penumpangs.index')
+        return redirect()->route('mobil.index')
             ->with('success', 'Project deleted successfully');
     }
 }

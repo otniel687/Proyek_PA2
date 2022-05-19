@@ -28,7 +28,7 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fa-solid fa-user-large"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Admin</div>
+          <div class="sidebar-brand-text mx-3">Petugas</div>
         </a>
 
         <!-- Divider -->
@@ -36,7 +36,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-          <a class="nav-link" href="{{asset('/admin')}}">
+          <a class="nav-link" href="{{asset('/petugass')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a
           >
@@ -48,17 +48,9 @@
         <!-- Heading -->
         <div class="sidebar-heading">STARTER</div>
 
-        <!-- Nav Item - Profil-->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/profiles')}}">
-            <i class="fa-solid fa-circle-user"></i>
-            <span>Profil</span>
-          </a>
-        </li>
-
         <!-- Nav Item -Jadwal-->
         <li class="nav-item">
-          <a class="nav-link" href="{{asset('/kendaraans')}}">
+          <a class="nav-link" href="{{asset('/mobil')}}">
             <i class="fa-solid fa-car"></i>
             <span>Kendaraan</span></a
           >
@@ -66,40 +58,10 @@
 
         <!-- Nav Item -  Penumpang-->
         <li class="nav-item">
-          <a class="nav-link" href="{{asset('/penumpangs')}}">
+          <a class="nav-link" href="{{asset('/petugas')}}">
             <i class="fa-solid fa-clipboard-list"></i>
             <span>Penumpang</span></a
           >
-        </li>
-
-        <!-- Nav Item - Pages Informasi -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-newspaper"></i>
-            <span>Informasi</span>
-          </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="{{asset('/beritas')}}">Berita</a>
-              <a class="collapse-item" href="{{asset('/informasis')}}">Pengumuman</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - User -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/users')}}">
-            <i class="fa-solid fa-users"></i>
-            <span>Akun</span>
-          </a>
-        </li>
-
-        <!-- Nav Item - Galeri -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{asset('/galeris')}}">
-            <i class="fa-solid fa-image"></i>
-            <span>Galeri</span>
-          </a>
         </li>
 
         <!-- Nav Item - Pengunjung -->
@@ -269,21 +231,5 @@
     });
   });
 </script>
-<script type='text/javascript'>
-        $(window).load(function(){
-            $("#jenis").change(function() {
-                console.log($("#jenis option:selected").val());
-                if ($("#jenis option:selected").val() == 'Tidak Berkendara') {
-                    $('#no_polisi').prop('hidden', 'true');
-                } else if ($("#jenis option:selected").val() == 'Gol I (Sepeda Dayung)'){
-                    $('#no_polisi').prop('hidden', 'true');
-                }else if ($("#jenis option:selected").val() == ''){
-                    $('#no_polisi').prop('hidden', 'true');
-                }else {
-                    $('#no_polisi').prop('hidden', false);
-                }
-            });
-        });
-        </script>
 </body>
 </html>

@@ -11,6 +11,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\CountController;
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\TampilController;
+use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\MobilController;
+
 
 
 
@@ -27,22 +31,23 @@ use App\Http\Controllers\AkunController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('users', AkunController::class);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/berita', [PenggunaController::class,'berita']);
+
 Route::get('/pengumuman', [PenggunaController::class,'pengumuman']);
+Route::get('/', [PenggunaController::class,'index']);
+Route::get('berita/show/{id}', 'PenggunaController@show'); 
+Route::get('/berita', [PenggunaController::class,'berita']);
 Route::get('/tentang', [PenggunaController::class,'tentang']);
 Route::get('/jadwal', [PenggunaController::class,'jadwal']);
 Route::get('/lokasi', [PenggunaController::class,'lokasi']);
 Route::get('/galeri', [PenggunaController::class,'galeri']);
 Route::get('/tabel', [PenggunaController::class,'tabel']);
 Route::get('/isi', [PenggunaController::class,'isi']);
-Route::post('/booking', [PesanController::class,'store']);
+Route::get('/booking', [PesanController::class,'index'])->name('pemesanan');
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
 Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');
 Route::post('simpanregister', 'App\Http\Controllers\AuthController@simpanregister')->name('simpanregister');
@@ -63,12 +68,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('kendaraans', KendaraanController::class);
         Route::resource('informasis', InformasiController::class);
         Route::resource('beritas', BeritaController::class);
+        Route::resource('users', AkunController::class);
     });
     Route::group(['middleware' => ['cek_login:pelanggan']], function () {
+        Route::post('/booking', [PesanController::class,'store']);
         Route::get('/pesan', [PesanController::class,'index'])->name('pemesanan');
     });
-    Route::group(['middleware' => ['cek_login:mekanik']], function () {
-        
+    Route::group(['middleware' => ['cek_login:petugas']], function () {
+        Route::get('/petugass', [CountController::class,'petugas']);
+        Route::resource('petugas', PetugasController::class);
+        Route::resource('mobil', MobilController::class);
     });
 });
 

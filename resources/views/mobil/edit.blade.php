@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('kendaraans.index') }}" enctype="multipart/form-data"> Back</a>
+                <a class="btn btn-primary" href="{{ route('mobil.index') }}" enctype="multipart/form-data"> Back</a>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     </div>
   @endif
 
-    <form action="{{ route('kendaraans.update',$kendaraan->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('mobil.update',$kendaraan->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
    
@@ -56,7 +56,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Jenis Kendaraan:</strong>
-                    <select name="jenis" id="jenis" class="form-control">
+                    <select name="jenis" class="form-control">
                         <option value="{{ $kendaraan->jenis }}">{{ $kendaraan->jenis }}</option>
                         <option value="Tidak Berkendara">Tidak Berkendara</option>
                         <option value="Gol I (Sepeda Dayung)">Gol I (Sepeda Dayung)</option>

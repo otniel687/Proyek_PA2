@@ -7,81 +7,24 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <!-- Blog entries-->
-        <div class="col-lg-12 ">
+        <div class="container ">
           <!-- Nested row for non-featured blog posts-->
-          <div class="row">
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" width="400" height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
+          <div class="row mb-5">
+            @foreach ($informasis as $informasi)
+            <div class="col-lg-4 mb-5">
+                  <div class="card" style="width: 20rem;" >
+                    <img src="{{ Storage::url($informasi->image) }}" class="card-img-top"  width="300" height="250" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h4 text-center">{{ $informasi->title }}</h5>
+                    </div>
+                  </div>
                 </div>
-              </div>
+            @endforeach
+             <div class="d-flex justify-content-end mt-3">
+                {{ $informasis->links() }}
             </div>
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" width="400" height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" width="400" height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
-                </div>
-              </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top"  height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" width="400" height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <!-- Blog post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" width="400" height="250"  src="img/Pengumuman1.jpeg" alt="..." /></a>
-                <div class="card-body mb-3">
-                  <h2 class="card-title h4 text-center">Jadwal Keberangkatan Bulan April</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Pagination-->
-          <nav aria-label="Pagination">
-            <hr class="my-0" />
-            <ul class="pagination justify-content-center my-4">
-              <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-              <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-              <li class="page-item"><a class="page-link" href="#!">2</a></li>
-              <li class="page-item"><a class="page-link" href="#!">3</a></li>
-              <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-              <li class="page-item"><a class="page-link" href="#!">15</a></li>
-              <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
-    </div>
 @endsection

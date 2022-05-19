@@ -1,4 +1,4 @@
-@extends('layouts.adm')
+@extends('layouts.tabel')
 @section('title', 'Daftar Akun')
 @section('judul', 'Data  Akun')
 @section('content')
@@ -15,8 +15,9 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
-     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    
+@endsection
+@section('tabel')
     <thead>
         <tr>
         <th>No</th>
@@ -30,7 +31,7 @@
     <tbody>
         @foreach ($users as $user)
         <tr>
-            <td>{{ $user->id }}</td>
+            <td>{{ ++$i }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->username }}</td>
             <td>{{ $user->email }}</td>
@@ -49,6 +50,9 @@
         </tr>
         @endforeach
     </tbody>
-    {{$users->links()}}
-</table>
+@endsection
+@section('links')
+    <div class="d-flex justify-content-end mt-3">
+        {{ $users->links() }}
+    </div>
 @endsection

@@ -16,42 +16,12 @@ Codepen: https://codepen.io/supah/
 
 -->
         <div class="gallery">
+           @foreach ($galeris as $galeri)
           <figure>
-            <img src="assets/img/1.jpg" alt="" />
+            <img src="{{ Storage::url($galeri->image) }}" alt="" />
           </figure>
-          <figure>
-            <img src="assets/img/2.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/3.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/4.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/5.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/6.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/7.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/8.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/9.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/10.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/11.jpg" alt="" />
-          </figure>
-          <figure>
-            <img src="assets/img/12.jpg" alt="" />
-          </figure>
+          @endforeach
+          
         </div>
 
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none">

@@ -19,22 +19,22 @@
         />
 
         <!-- Vendor CSS Files -->
-        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
+        <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
+        
         <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-        <link href="assets/css/variables.css" rel="stylesheet" />
+        <link href="{{asset('assets/css/variables.css')}}" rel="stylesheet" />
 
         <!--Css style-->
-        <link rel="stylesheet" href="css/style.css" />    
+        <link rel="stylesheet" href="{{asset('css/style.css')}}" />    
         <style>
         .bgimg {
           background-repeat: no-repeat;
           background-size: cover;
-          background-image: url("/img/home1.jpg");
+          background-image: url("{{ Storage::url($home2->image) }}");
           height: 80vh;  
           }
       </style>
@@ -77,8 +77,12 @@
                     <li><a class="dropdown-item" href="{{asset('/lokasi')}}">Lokasi</a></li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{asset('/jadwal')}}">Pelayanan</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pelayanan </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{asset('/jadwal')}}">Jadwal</a></li>
+                    <li><a class="dropdown-item" href="{{asset('/booking')}}">Pesan</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Publikasi </a>
@@ -91,7 +95,15 @@
                   <a class="nav-link" href="{{asset('/galeri')}}">Galeri</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn btn-info" href="{{asset('/login')}}">Masuk</a>
+                  @if (Route::has('login'))
+                  <div class="hidden fixed sm:block">
+                    @auth
+                        <a class="nav-item btn btn-danger tombol" href="{{route('logout')}}">Log Out</a>
+                    @else
+                        <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}">Login</a>
+                    @endif
+                  </div>
+                  @endif
                 </li>
               </ul>
             </div>
@@ -105,10 +117,9 @@
           <div class="row ">
             <div class="col-lg-7 bg-hover1">
               <div class="text-start my-5 ">
-                <h1 class="fw-bolder ">Selamat Datang di Pelabuhan!</h1>
+                <h1 class="fw-bolder ">{{ $home2->title }}</h1>
                 <p class="lead mb-0">
-                  Penetapan nama Pelabuhan Mulia Raja Napitupulu, berdasarkan Surat Kementerian Perhubungan Dirjen Perhubungan Darat Nomor Ap./0611/16/DRJD/2021 tertanggal 29 Juli 2021 yang diteken oleh Dirjen Perhubungan Darat Budi
-                  Setiyadi.
+                  {{ $home2->content}}
                 </p>
               </div>
             </div>
@@ -124,7 +135,9 @@
             <!-- Side widget-->
             <div class="card mb-4">
               <div class="card-body">
-                <img class="card-img-top" width="400" height="350" src="img/home2.jpg" alt="..." />
+                <div class="gallery">
+                  <img class="card-img-top" width="400" height="350" src="{{ Storage::url($home1->image) }}" alt="..." />
+                </div>
               </div>
             </div>
           </div>
@@ -133,14 +146,12 @@
             <!-- Featured blog post-->
             <div class="mb-4 text-end">
               <div class="card-body">
-                <h2 class="card-title">Tentang Pelabuhan</h2>
+                <h2 class="card-title">{{ $home1->title }}</h2>
                 <hr />
                 <p class="card-text">
-                  Pelabuhan Balige di Kabupaten Toba, Provinsi Sumatera Utara yang sejak dulu namanya tidak asing di seluruh nusantara, sebagai salahsatu pelabuhan penyeberangan vital di Danau Toba, kini namanya berganti menjadi Pelabuhan
-                  Mulia Raja Napitupulu Balige. Lewat nama Mulia Raja Napitupulu yang mengandung arti dan makna besar, Bupati Toba Poltak Sitorus berharap pelabuhan ini akan kelak membawa dampak positif dan besar mendorong aspek pembangunan
-                  kepariwisataan di Toba. Di samping itu, juga membawa mulia bagi keturunan marga Mulia Raja Napitupulu dan kemuliaan bagi Tuhan Yang Maha Kuasa.
+                  {{ $home1->content}}
                 </p>
-                <a class="btn btn-primary" href="#!">Read more →</a>
+                <a class="btn btn-primary" href="{{asset('/tentang')}}">Read more →</a>
               </div>
             </div>
           </div>
@@ -157,31 +168,34 @@
                 <h2>Berita Terbaru</h2>
               </div>
               <div class="col-lg-3">
-                <a href=""><p class="text-end text-warning">Berita Lainnya</p></a>
+                <a href="{{asset('/berita')}}"><p class="text-end text-warning">Berita Lainnya</p></a>
               </div>
             </div>
             <hr />
 
             <!-- Nested row for non-featured blog posts-->
+            @foreach ($berita as $tentang) 
             <div class="row">
               <div class="col">
                 <!-- Blog post-->
                 <div class="mb-3">
                   <div class="row">
                     <div class="col-md-4">
-                      <img src="img/pelabuhan1.jpg" class="img-fluid rounded-start img-lg" alt="..." />
+                      <img src="{{ Storage::url($tentang->image) }}" class="img-fluid rounded-start img-lg" alt="..." />
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-title">Pelabuhan Balige Berganti Nama Menjadi Pelabuhan Mulia Raja Napitupulu Balige</h5>
-                        <p class="card-text">Pelabuhan Balige di Kabupaten Toba, Provinsi Sumatra Utara, sejak dulu terkenal pelabuhan penyeberangan di Danau Toba..</p>
+                        <h5 class="card-title">{{$tentang->title}}</h5>
+                        <p class="card-text">{{ substr($tentang->description, 0, 90) }}...</p>
                         <hr />
                         <div class="row">
                           <div class="col">
-                            <p class="card-text"><small class="text-muted">3 Agustus 2022</small></p>
+                            <p class="card-text"><small class="text-muted">{{$tentang->tgl_berita}}</small></p>
                           </div>
                           <div class="col">
-                            <a href=""><p class="text-end text-primary">Lihat Selengkapnya</p></a>
+                            {{-- <a href="{{url('tentang/show')}}/{{$tentang->id}}" class="btn btn-primary">Edit Post</a> --}}
+
+                            <a href="{{url('berita/show')}}/{{$tentang->id}}"><p class="text-end text-primary">Lihat Selengkapnya</p></a>
                           </div>
                         </div>
                       </div>
@@ -190,8 +204,9 @@
                 </div>
               </div>
             </div>
+            @endforeach
 
-            <div class="row">
+            {{-- <div class="row">
               <div class="col">
                 <!-- Blog post-->
                 <div class="mb-3">
@@ -217,7 +232,8 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
+
           </div>
           <!-- Side widgets-->
           <div class="col-lg-4">
@@ -229,7 +245,9 @@
                 <div class="mb-3" style="max-width: 540px">
                   <div class="row g-0">
                     <div class="col">
-                      <img src="img/Pengumuman1.jpeg" class="img-fluid rounded-start" alt="..." />
+                      @foreach ($informasi as $data)
+                      <a data-toggle="modal" data-target="#exampleModal"><img src="{{ Storage::url($data->image) }}" class="img-fluid rounded-start" alt="..."  /></a>
+                       @endforeach
                     </div>
                   </div>
                 </div>
@@ -239,7 +257,31 @@
         </div>
       </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+      @foreach ($informasi as $data)
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{ $data->title}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <img src="{{ Storage::url($data->image) }}" class="img-fluid rounded-start" alt="..." />
+            
+          </div>
+      </div>
+      @endforeach
+    </div>
+
     <!-- JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

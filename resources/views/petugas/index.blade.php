@@ -1,11 +1,11 @@
-@extends('layouts.tabel')
+@extends('layouts.ptg')
 @section('title', 'Daftar Penumpang')
 @section('judul', 'Data  Penumpang')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('penumpangs.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('petugas.create') }}"> Create New Post</a>
             </div>
         </div>
     </div>
@@ -36,9 +36,9 @@
             <td>{{ $penumpang->umur }}</td>
             <td>{{ $penumpang->alamat }}</td>
             <td>
-                <form action="{{ route('penumpangs.destroy', $penumpang->id) }}" method="POST">
+                <form action="{{ route('petugas.destroy', $penumpang->id) }}" method="POST">
 
-                    <a class="btn btn-primary" href="{{ route('penumpangs.edit',$penumpang->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('petugas.edit',$penumpang->id) }}">Edit</a>
 
                     @csrf
                     @method('DELETE')

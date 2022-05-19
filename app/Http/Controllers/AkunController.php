@@ -15,9 +15,10 @@ class AkunController extends Controller
      */
     public function index()
     {
-        $data['users'] = User::orderBy('id','desc')->paginate(5);
+        $data['users'] = User::orderBy('id','desc')->simplePaginate(5);
     
-        return view('users.index', $data);
+        return view('users.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**

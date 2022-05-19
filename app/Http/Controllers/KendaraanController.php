@@ -14,9 +14,10 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        $data['kendaraans'] = Kendaraan::orderBy('id','desc')->paginate(5);
+        $data['kendaraans'] = Kendaraan::orderBy('id','desc')->simplePaginate(5);
     
-        return view('kendaraans.index', $data);
+        return view('kendaraans.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**
@@ -42,7 +43,7 @@ class KendaraanController extends Controller
             'waktu' => 'required',
             'nama' => 'required',
             'jenis' => 'required',
-            'no_polisi' => 'required'
+            'no_polisi' => 'nullable'
         ]);
 
         Kendaraan::create($request->all());

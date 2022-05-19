@@ -14,9 +14,10 @@ class InformasiController extends Controller
      */
     public function index()
     {
-        $data['informasis'] = Informasi::orderBy('id','desc')->paginate(5);
-    
-        return view('informasis.index', $data);
+        $data['informasis'] = Informasi::orderBy('id','desc')->simplePaginate(5);
+
+        return view('informasis.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**

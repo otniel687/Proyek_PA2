@@ -22,7 +22,7 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Pengumuman :</strong>
+                <strong>Nama :</strong>
                 <input type="text" name="title" class="form-control" placeholder="Post Title">
                @error('title')
                   <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

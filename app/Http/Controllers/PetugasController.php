@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Penumpang;
 use Illuminate\Http\Request;
 
-class PenumpangController extends Controller
+class PetugasController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -16,7 +16,7 @@ class PenumpangController extends Controller
     {
         $data['penumpangs'] = Penumpang::orderBy('id','desc')->simplePaginate(5);
     
-        return view('penumpangs.index', $data)
+        return view('petugas.index', $data)
             ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class PenumpangController extends Controller
      */
     public function create()
     {
-        return view('penumpangs.create');
+        return view('petugas.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class PenumpangController extends Controller
 
         Penumpang::create($request->all());
 
-        return redirect()->route('penumpangs.index')
+        return redirect()->route('petugas.index')
             ->with('success', 'Penumpang created successfully.');
     }
 
@@ -59,7 +59,7 @@ class PenumpangController extends Controller
      */
     public function show(Penumpang $penumpang)
     {
-        return view('penumpangs.show', compact('penumpang'));
+        return view('petugas.show', compact('penumpang'));
     }
 
     /**
@@ -68,9 +68,11 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Penumpang $penumpang)
+    public function edit(Penumpang $penumpang, $id)
     {
-        return view('penumpangs.edit', compact('penumpang'));
+        $penumpang = Penumpang::find($id);
+
+        return view('petugas.edit', ["penumpang"=>$penumpang]);
     }
 
     /**
@@ -90,7 +92,7 @@ class PenumpangController extends Controller
         ]);
         $penumpang->update($request->all());
 
-        return redirect()->route('penumpangs.index')
+        return redirect()->route('petugas.index')
             ->with('success', 'Penumpang updated successfully');
     }
 
@@ -100,11 +102,12 @@ class PenumpangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Penumpang $penumpang)
+    public function destroy(Penumpang $penumpang, $id)
     {
+        $penumpang = Penumpang::find($id);
         $penumpang->delete();
 
-        return redirect()->route('penumpangs.index')
+        return redirect()->route('petugas.index')
             ->with('success', 'Project deleted successfully');
     }
 }

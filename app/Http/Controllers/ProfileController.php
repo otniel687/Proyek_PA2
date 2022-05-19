@@ -16,7 +16,8 @@ class ProfileController extends Controller
     {
         $data['profiles'] = Profile::orderBy('id','desc')->paginate(5);
     
-        return view('profiles.index', $data);
+        return view('profiles.index', $data)
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     /**
@@ -39,7 +40,7 @@ class ProfileController extends Controller
     {
         $request->validate([
           'title' => 'required',
-        'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
         'content' => 'required'
         ]);
         $path = $request->file('image')->store('public/images');
@@ -86,14 +87,14 @@ class ProfileController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             'content' => 'required'
         ]);
         
         $profile = Profile::find($id);
         if($request->hasFile('image')){
             $request->validate([
-              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+              'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             ]);
             $path = $request->file('image')->store('public/images');
             $profile->image = $path;
