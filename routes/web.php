@@ -35,9 +35,6 @@ use App\Http\Controllers\MobilController;
 //     return view('welcome');
 // });
 
-
-
-Route::get('/pengumuman', [PenggunaController::class,'pengumuman']);
 Route::get('/', [PenggunaController::class,'index']);
 Route::get('berita/show/{id}', 'PenggunaController@show'); 
 Route::get('/berita', [PenggunaController::class,'berita']);
@@ -46,6 +43,7 @@ Route::get('/jadwal', [PenggunaController::class,'jadwal']);
 Route::get('/lokasi', [PenggunaController::class,'lokasi']);
 Route::get('/galeri', [PenggunaController::class,'galeri']);
 Route::get('/tabel', [PenggunaController::class,'tabel']);
+Route::get('/pengumuman', [PenggunaController::class,'pengumuman']);
 Route::get('/isi', [PenggunaController::class,'isi']);
 Route::get('/booking', [PesanController::class,'index'])->name('pemesanan');
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');

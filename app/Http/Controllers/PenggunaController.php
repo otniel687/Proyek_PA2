@@ -76,7 +76,13 @@ class PenggunaController extends Controller
     
     public function jadwal()
     {
-        return view('content.jadwal');
+        $jadwal1 = Profile::find(5);
+        $jadwal2 = Profile::find(6);
+        
+        return view('content.jadwal',[
+            'jadwal1'=>$jadwal1,
+            'jadwal2'=>$jadwal2,
+        ]);
     }
 
     public function galeri()

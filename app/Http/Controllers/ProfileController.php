@@ -14,7 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $data['profiles'] = Profile::orderBy('id','desc')->paginate(5);
+        $data['profiles'] = Profile::orderBy('id','desc')->simplePaginate(5);
     
         return view('profiles.index', $data)
             ->with('i',(request()->input('page',1) - 1) * 5);
@@ -87,8 +87,6 @@ class ProfileController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
-            'content' => 'required'
         ]);
         
         $profile = Profile::find($id);
