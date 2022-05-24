@@ -68,7 +68,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{{asset('/')}}">Beranda</a>
+                  <a class="nav-link" aria-current="page" href="{{asset('/')}}">Beranda</a>
                 </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Profil </a>
@@ -206,34 +206,6 @@
             </div>
             @endforeach
 
-            {{-- <div class="row">
-              <div class="col">
-                <!-- Blog post-->
-                <div class="mb-3">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="img/pelabuhan1.jpg" class="img-fluid rounded-start img-lg" alt="..." />
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Peresmian Dan Pengoperasian Tujuh Pelabuhan Serta Empat Kapal Motor Penyeberangan Di Kawasan Danau Toba</h5>
-                        <p class="card-text">Peresmian Dan Pengoperasian Tujuh Pelabuhan Serta Empat Kapal Motor Penyeberangan Di Kawasan Danau Toba</p>
-                        <hr />
-                        <div class="row">
-                          <div class="col">
-                            <p class="card-text"><small class="text-muted">12 Februari 2019</small></p>
-                          </div>
-                          <div class="col">
-                            <a href=""><p class="text-end text-primary">Lihat Selengkapnya</p></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> --}}
-
           </div>
           <!-- Side widgets-->
           <div class="col-lg-4">
@@ -256,6 +228,26 @@
           </div>
         </div>
       </div>
+      <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+<<<<<<< Updated upstream
+                <li class="list-inline-item"><a href="{{asset('profile')}}">Profile</a></li>
+                <li class="list-inline-item"><a href="{{asset('lokasi')}}">Lokasi</a></li>
+                <li class="list-inline-item"><a href="{{asset('login')}}">Login</a></li>
+                <li class="list-inline-item"><a href="{{asset('jadwal')}}">Jadwal</a></li>
+                <li class="list-inline-item"><a href="{{asset('galeri')}}">Galery</a></li>
+=======
+                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profile</a></li>
+                <li class="list-inline-item"><a href="{{asset('/lokasi')}}">Lokasi</a></li>
+                <li class="list-inline-item"><a href="{{asset('/login')}}">Login</a></li>
+                <li class="list-inline-item"><a href="{{asset('/jadwal')}}">Jadwal</a></li>
+                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galery</a></li>
+>>>>>>> Stashed changes
+            </ul>
+            <p class="copyright">Pelabuhan Mulia Raja Napitupulu © 2022</p>
+        </footer>
+    </div>
     </main>
 
     <!-- Modal -->
@@ -278,6 +270,7 @@
       @endforeach
     </div>
 
+    
     <!-- JavaScript Files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

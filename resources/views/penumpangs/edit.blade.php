@@ -57,7 +57,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Alamat:</strong>
-                    <textarea class="form-control" style="height:50px" name="alamat" value="{{ $penumpang->alamat }}"></textarea>
+                    <textarea class="form-control" style="height:50px" name="alamat" >{{ $penumpang->alamat }}</textarea>
                     @error('alamat')
                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
