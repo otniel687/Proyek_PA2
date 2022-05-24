@@ -88,7 +88,7 @@ class KendaraanController extends Controller
             'waktu' => 'required',
             'nama' => 'required',
             'jenis' => 'required',
-            'no_polisi' => 'required'
+            'no_polisi' => 'nullable'
         ]);
         $kendaraan->update($request->all());
 
