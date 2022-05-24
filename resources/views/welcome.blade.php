@@ -231,20 +231,12 @@
       <div class="footer-basic">
         <footer>
             <ul class="list-inline">
-<<<<<<< Updated upstream
-                <li class="list-inline-item"><a href="{{asset('profile')}}">Profile</a></li>
-                <li class="list-inline-item"><a href="{{asset('lokasi')}}">Lokasi</a></li>
-                <li class="list-inline-item"><a href="{{asset('login')}}">Login</a></li>
-                <li class="list-inline-item"><a href="{{asset('jadwal')}}">Jadwal</a></li>
-                <li class="list-inline-item"><a href="{{asset('galeri')}}">Galery</a></li>
-=======
                 <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profile</a></li>
                 <li class="list-inline-item"><a href="{{asset('/lokasi')}}">Lokasi</a></li>
                 <li class="list-inline-item"><a href="{{asset('/login')}}">Login</a></li>
                 <li class="list-inline-item"><a href="{{asset('/jadwal')}}">Jadwal</a></li>
                 <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galery</a></li>
->>>>>>> Stashed changes
-            </ul>
+              </ul>
             <p class="copyright">Pelabuhan Mulia Raja Napitupulu © 2022</p>
         </footer>
     </div>
