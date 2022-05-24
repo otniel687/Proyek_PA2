@@ -143,16 +143,28 @@
     <div class="footer-basic">
         <footer>
             <ul class="list-inline">
+<<<<<<< Updated upstream
                 <li class="list-inline-item"><a href="{{asset('profile')}}">Profile</a></li>
                 <li class="list-inline-item"><a href="{{asset('lokasi')}}">Lokasi</a></li>
                 <li class="list-inline-item"><a href="{{asset('login')}}">Login</a></li>
                 <li class="list-inline-item"><a href="{{asset('jadwal')}}">Jadwal</a></li>
                 <li class="list-inline-item"><a href="{{asset('galeri')}}">Galery</a></li>
+=======
+                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profile</a></li>
+                <li class="list-inline-item"><a href="{{asset('/lokasi')}}">Lokasi</a></li>
+                <li class="list-inline-item"><a href="{{asset('/login')}}">Login</a></li>
+                <li class="list-inline-item"><a href="{{asset('/jadwal')}}">Jadwal</a></li>
+                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galery</a></li>
+>>>>>>> Stashed changes
             </ul>
             <p class="copyright">Pelabuhan Mulia Raja Napitupulu © 2022</p>
         </footer>
     </div>
 
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
     <!-- JavaScript Files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

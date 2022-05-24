@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('waktu');
             $table->string('nama');
             $table->string('jenis');
-            $table->string('no_polisi');
+            $table->string('no_polisi')->nullable();
             $table->timestamps();
         });
     }
