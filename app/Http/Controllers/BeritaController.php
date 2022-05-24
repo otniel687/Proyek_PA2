@@ -56,7 +56,7 @@ class BeritaController extends Controller
         $berita->save();
      
         return redirect()->route('beritas.index')
-                        ->with('success','Post has been created successfully.');
+                        ->with('success','Data berita sudah berhasil dibuat.');
     }
 
     /**
@@ -110,7 +110,7 @@ class BeritaController extends Controller
         $berita->save();
     
         return redirect()->route('beritas.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','Data berita sudah berhasil diubah');
     }
 
     /**
@@ -124,6 +124,6 @@ class BeritaController extends Controller
         $berita->delete();
     
         return redirect()->route('beritas.index')
-                        ->with('success','Berita has been deleted successfully');
+                        ->with('success','Data berita sudah berhasil dihapus');
     }
 }

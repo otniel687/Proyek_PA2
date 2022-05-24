@@ -49,7 +49,7 @@ class KendaraanController extends Controller
         Kendaraan::create($request->all());
 
         return redirect()->route('kendaraans.index')
-            ->with('success', 'Kendaraan created successfully.');
+            ->with('success', 'Data kendaraan sudah berhasil dibuat.');
     }
 
     /**
@@ -93,7 +93,7 @@ class KendaraanController extends Controller
         $kendaraan->update($request->all());
 
         return redirect()->route('kendaraans.index')
-            ->with('success', 'Kendaraan updated successfully');
+            ->with('success', 'Data kendaraan sudah berhasil diubah');
     }
 
     /**
@@ -107,6 +107,6 @@ class KendaraanController extends Controller
         $kendaraan->delete();
 
         return redirect()->route('kendaraans.index')
-            ->with('success', 'Project deleted successfully');
+            ->with('success', 'Data kendaraan sudah berhasil dihapus');
     }
 }

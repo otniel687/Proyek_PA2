@@ -51,7 +51,7 @@ class InformasiController extends Controller
         $informasi->save();
      
         return redirect()->route('informasis.index')
-                        ->with('success','Post has been created successfully.');
+                        ->with('success','Data informasi sudah berhasil dibuat.');
     }
 
     /**
@@ -103,7 +103,7 @@ class InformasiController extends Controller
         $informasi->save();
     
         return redirect()->route('informasis.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','Data informasi sudah berhasil diubah');
     }
 
     /**
@@ -117,6 +117,6 @@ class InformasiController extends Controller
         $informasi->delete();
     
         return redirect()->route('informasis.index')
-                        ->with('success','informasi has been deleted successfully');
+                        ->with('success','Data informasi sudah berhasil dihapus');
     }
 }

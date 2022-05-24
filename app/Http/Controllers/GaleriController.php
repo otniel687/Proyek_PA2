@@ -49,7 +49,7 @@ class GaleriController extends Controller
         $galeri->save();
      
         return redirect()->route('galeris.index')
-                        ->with('success','Post has been created successfully.');
+                        ->with('success','Data galeri sudah berhasil dibuat.');
     }
 
     /**
@@ -99,7 +99,7 @@ class GaleriController extends Controller
         $galeri->save();
     
         return redirect()->route('galeris.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','Data galeri sudah berhasil diubah');
     }
 
     /**
@@ -113,6 +113,6 @@ class GaleriController extends Controller
         $galeri->delete();
     
         return redirect()->route('galeris.index')
-                        ->with('success','galeri has been deleted successfully');
+                        ->with('success','Data galeri sudah berhasil dihapus');
     }
 }
