@@ -1,6 +1,6 @@
 @extends('layouts.tabel')
-@section('title', 'Daftar Kendaraan')
-@section('judul', 'Data  Kendaraan')
+@section('title', 'Daftar Pengumuman')
+@section('judul', 'Data  Pengumuman')
 @section('content')
 <div class="row">
         <div class="col-lg-12 margin-tb">

@@ -1,3 +1,4 @@
+@section('judul', 'Ubah Data Pengumuman')
 @extends('layouts.adm')
 
 

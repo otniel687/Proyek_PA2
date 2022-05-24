@@ -1,14 +1,11 @@
 @extends('layouts.adm')
 @section('title', 'Daftar profile | Admin')
-@section('judul', 'Data profile')
+@section('judul', 'Ubah Data profile')
 @section('content')
     <div class="container mt-2">
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit profile</h2>
-            </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('profiles.index') }}" enctype="multipart/form-data"> Back</a>
             </div>

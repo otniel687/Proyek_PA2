@@ -1,14 +1,11 @@
 @extends('layouts.adm')
 @section('title', 'Daftar Berita | Admin')
-@section('judul', 'Data  Berita')
+@section('judul', 'Ubah Data  Berita')
 @section('content')
     <div class="container mt-2">
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Berita</h2>
-            </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('beritas.index') }}" enctype="multipart/form-data"> Back</a>
             </div>

@@ -1,4 +1,5 @@
 @extends('layouts.adm')
+@section('judul', 'Tambah Data Penumpang')
 @section('content')
     <div class="container mt-2">
   

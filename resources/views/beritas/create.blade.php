@@ -1,6 +1,6 @@
 @extends('layouts.adm')
 @section('title', 'Daftar Berita | Admin')
-@section('judul', 'Data  Berita')
+@section('judul', 'Tambah Data  Berita')
 @section('content')
     <div class="container mt-2">
   
