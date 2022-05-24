@@ -55,7 +55,7 @@ class AkunController extends Controller
             'remember_token' => Str::random(60),
         ]);
         return redirect()->route('users.index')
-            ->with('success', 'user created successfully.');
+            ->with('success', 'Data akun sudah berhasil masuk.');
     }
 
     /**
@@ -98,7 +98,7 @@ class AkunController extends Controller
         $user->update($request->all());
 
         return redirect()->route('users.index')
-            ->with('success', 'user updated successfully');
+            ->with('success', 'Data akun sudah berhasil diubah');
     }
 
     /**
@@ -112,6 +112,6 @@ class AkunController extends Controller
         $user->delete();
 
         return redirect()->route('users.index')
-            ->with('success', 'Project deleted successfully');
+            ->with('success', 'Data akun sudah berhasil dihapus');
     }
 }
