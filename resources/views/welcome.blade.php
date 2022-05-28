@@ -151,7 +151,7 @@
                 <p class="card-text">
                   {{ $home1->content}}
                 </p>
-                <a class="btn btn-primary" href="{{asset('/tentang')}}">Read more →</a>
+                <a class="btn btn-primary" href="{{asset('/tentang')}}">Baca Selengkapnya →</a>
               </div>
             </div>
           </div>
