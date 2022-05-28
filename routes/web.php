@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\CountController;
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\TampilController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\MobilController;
@@ -36,7 +37,7 @@ use App\Http\Controllers\MobilController;
 // });
 
 Route::get('/', [PenggunaController::class,'index']);
-Route::get('berita/show/{id}', 'PenggunaController@show'); 
+Route::get('berita/show/{id}', 'PenggunaController@show');
 Route::get('/berita', [PenggunaController::class,'berita']);
 Route::get('/tentang', [PenggunaController::class,'tentang']);
 Route::get('/jadwal', [PenggunaController::class,'jadwal']);
@@ -80,5 +81,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
 
 

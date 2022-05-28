@@ -23,6 +23,7 @@ class User extends Authenticatable
         'level', //baru'
         'email',
         'password',
+        'google_id'
     ];
 
     /**

@@ -77,8 +77,14 @@
                 <div class="text-center mt-2 mb-3">
                   <div class="text-job text-muted">Login With Social</div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <button type="submit" class="form-control btn btn-secondary rounded submit px-3"><span class="fab fa-google"></span> Masuk dengan Google</button>
+                </div> -->
+                <div class="form-group">
+                    <!-- <button type="submit" class="form-control btn btn-block rounded submit px-3"><span class="fab fa-google"></span> Masuk dengan Google</button> -->
+                    <a href="{{ route('google.login') }}" class="form-control btn btn-block rounded submit px-3">
+                        <span class="fab fa-google"></span> Masuk dengan Google
+                    </a>
                 </div>
                 </div>
             </div>
