@@ -50,7 +50,7 @@
 
         <!-- Nav Item -Jadwal-->
         <li class="nav-item">
-          <a class="nav-link" href="{{asset('/petugas_kendaraan')}}">
+          <a class="nav-link" href="{{asset('/mobil')}}">
             <i class="fa-solid fa-car"></i>
             <span>Kendaraan</span></a
           >
