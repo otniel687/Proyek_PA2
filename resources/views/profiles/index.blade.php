@@ -22,11 +22,7 @@
         <th>No</th>
         <th>Gambar</th>
         <th>Title</th>
-<<<<<<< Updated upstream
-        <th width="280px">Aksi</th>
-=======
         <th width="180px">Action</th>
->>>>>>> Stashed changes
     </tr>
 </thead>
 <tbody>
