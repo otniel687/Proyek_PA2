@@ -245,12 +245,15 @@
                       <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem" src="img/undraw_posting_photo.svg" alt="..." />
                     </div>
                     <p>
-                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut : Dapat menegelola data diri pada
-                      “Ubah data diri”
+                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut : 
                     </p>
-                    <p>1. Anda melakukan perubahan data website pada fitur yang ada pada halaman Admin ini.</p>
-                    <p>2. Dapat memverifikasi daftar gambar yang sudah diajukan pengunjung website pada “Kelola Galeri”</p>
-                    <p>3. Dapat mengedit pusat bantuan pada “Pusat Bantuan”.</p>
+                    <p>1. Dapat mengelola data profil pada navigasi "Profil"</p>
+                    <p>2. Dapat mengelola data kendaraan pada navigasi “Kendaraan”</p>
+                    <p>3. Dapat mengelola data penumpang pada navigasi “Penumpang”</p>
+                    <p>4. Dapat mengubah dan menghapus data Berita dan data Pengumuman pada navigasi “Kendaraan”</p>
+                    <p>5. Dapat mengelola akun penumpang dan akun petugas pada navigasi “Akun”</p>
+                    <p>6. Dapat memverifikasi daftar gambar yang sudah diajukan pengunjung website pada “Galeri”</p>
+                    <p>7. Dapat mengunjungi halaman pengunjung pada navigasi "Halaman Pengunjung".</p>
                   </div>
                 </div>
               </div>
