@@ -19,7 +19,7 @@
                       <p class="card-text">{{ substr($tampil->description, 0, 190) }}...</p>
                       <form form action="{{ route('tampils.show',$tampil->id) }}" method="POST">
                         @csrf
-                        <a class="btn btn-primary" href="{{ route('tampils.show',$tampil->id) }}">Read More →</a>
+                        <a class="btn btn-primary" href="{{ route('tampils.show',$tampil->id) }}">Baca Selengkapnya →</a>
                       </form>
                     </div>
                   </div>

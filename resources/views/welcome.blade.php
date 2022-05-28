@@ -24,18 +24,18 @@
         <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet" />
         <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet" />
         <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
-        
+
         <!-- Variables CSS Files. Uncomment your preferred color scheme -->
         <link href="{{asset('assets/css/variables.css')}}" rel="stylesheet" />
 
         <!--Css style-->
-        <link rel="stylesheet" href="{{asset('css/style.css')}}" />    
+        <link rel="stylesheet" href="{{asset('css/style.css')}}" />
         <style>
         .bgimg {
           background-repeat: no-repeat;
           background-size: cover;
           background-image: url("{{ Storage::url($home2->image) }}");
-          height: 80vh;  
+          height: 80vh;
           }
       </style>
         {{-- @if (Route::has('login'))
@@ -98,9 +98,9 @@
                   @if (Route::has('login'))
                   <div class="hidden fixed sm:block">
                     @auth
-                        <a class="nav-item btn btn-danger tombol" href="{{route('logout')}}">Log Out</a>
+                        <a class="nav-item btn btn-danger tombol" href="{{route('logout')}}">Keluar</a>
                     @else
-                        <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}">Login</a>
+                        <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}">Masuk</a>
                     @endif
                   </div>
                   @endif
@@ -174,7 +174,7 @@
             <hr />
 
             <!-- Nested row for non-featured blog posts-->
-            @foreach ($berita as $tentang) 
+            @foreach ($berita as $tentang)
             <div class="row">
               <div class="col">
                 <!-- Blog post-->
@@ -231,11 +231,11 @@
       <div class="footer-basic">
         <footer>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profile</a></li>
+                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profil</a></li>
                 <li class="list-inline-item"><a href="{{asset('/lokasi')}}">Lokasi</a></li>
-                <li class="list-inline-item"><a href="{{asset('/login')}}">Login</a></li>
+                <li class="list-inline-item"><a href="{{asset('/login')}}">Masuk</a></li>
                 <li class="list-inline-item"><a href="{{asset('/jadwal')}}">Jadwal</a></li>
-                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galery</a></li>
+                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galeri</a></li>
               </ul>
             <p class="copyright">Pelabuhan Mulia Raja Napitupulu © 2022</p>
         </footer>
@@ -254,15 +254,15 @@
             </button>
           </div>
           <div class="modal-body">
-           
+
               <img src="{{ Storage::url($data->image) }}" class="img-fluid rounded-start" alt="..." />
-            
+
           </div>
       </div>
       @endforeach
     </div>
 
-    
+
     <!-- JavaScript Files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

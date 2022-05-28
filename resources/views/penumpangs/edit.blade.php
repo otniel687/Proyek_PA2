@@ -8,17 +8,17 @@
                 <h2>Edit Data Penumpang</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('penumpangs.index') }}" enctype="multipart/form-data"> Back</a>
+                <a class="btn btn-primary" href="{{ route('penumpangs.index') }}" enctype="multipart/form-data"> Kembali</a>
             </div>
         </div>
     </div>
-   
+
   @if(session('status'))
     <div class="alert alert-success mb-1 mt-1">
         {{ session('status') }}
     </div>
   @endif
-       
+
   <form action="{{ route('penumpangs.update',$penumpang->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')

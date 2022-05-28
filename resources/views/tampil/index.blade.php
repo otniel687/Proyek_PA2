@@ -17,7 +17,7 @@
                       <div class="small text-muted">{{ $berita->tgl_berita }}</div>
                       <h5 class="card-title h4"> {{ substr($berita->title, 0, 50) }}...</h5>
                       <p class="card-text">{{ substr($berita->description, 0, 190) }}...</p>
-                        <a class="btn btn-primary"  href="{{url('berita/show')}}/{{$berita->id}}">Read More →</a>
+                        <a class="btn btn-primary"  href="{{url('berita/show')}}/{{$berita->id}}">Baca Selengkapnya →</a>
                     </div>
                   </div>
                 </div>

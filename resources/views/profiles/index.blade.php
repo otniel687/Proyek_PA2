@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-               <a class="btn btn-success" href="{{ route('profiles.create') }}"> Create New Post</a>
+               <a class="btn btn-success" href="{{ route('profiles.create') }}"> Buat Postingan Baru</a>
             </div>
         </div>
     </div>
-   
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -22,7 +22,7 @@
         <th>No</th>
         <th>Gambar</th>
         <th>Title</th>
-        <th width="280px">Action</th>
+        <th width="280px">Aksi</th>
     </tr>
 </thead>
 <tbody>
@@ -33,13 +33,13 @@
             <td>{{ $profile->title }}</td>
             <td>
                 <form action="{{ route('profiles.destroy',$profile->id) }}" method="POST">
-    
+
                     <a class="btn btn-primary" href="{{ route('profiles.edit',$profile->id) }}">Edit</a>
-   
+
                     @csrf
                     @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger">Delete</button>
+
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </td>
         </tr>

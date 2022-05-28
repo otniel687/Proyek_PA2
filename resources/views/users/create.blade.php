@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
+                        <a class="btn btn-primary" href="{{ route('users.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -15,10 +15,10 @@
                         {{ session('status') }}
                     </div>
                 @endif
-                
+
                 <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                
+
                     <div class="row mt-3 mb-5">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
@@ -56,7 +56,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="row">
                             <div class="form-group mb-3 col-6">
-                            <label class="label" for="password">Password</label>
+                            <label class="label" for="password">Kata Sandi</label>
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             @error('password')
@@ -66,7 +66,7 @@
                             @enderror
                             </div>
                                 <div class="form-group col-6">
-                                <label for="password-confirm" class="d-block">Password Confirmation</label>
+                                <label for="password-confirm" class="d-block">Konfirmasi Kata Sandi</label>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>

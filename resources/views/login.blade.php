@@ -54,9 +54,9 @@
                     <div class="d-block">
                     <label class="form-control-placeholder" for="password">Kata Sandi</label>
                       <div class="float-right">
-                        <a href="" class="text-small">
+                        <!-- <a href="" class="text-small">
                           Lupa Password?
-                        </a>
+                        </a> -->
                       </div>
                     </div>
                     <input id="password-field" type="password" class="form-control" id="inputPassword" name="password" tabindex="2" required autocomplete="current-password">
@@ -75,7 +75,7 @@
                   </div> -->
                 </form>
                 <div class="text-center mt-2 mb-3">
-                  <div class="text-job text-muted">Masuk dengan lain</div>
+                  <div class="text-job text-muted">Atau</div>
                 </div>
                 <!-- <div class="form-group">
                     <button type="submit" class="form-control btn btn-secondary rounded submit px-3"><span class="fab fa-google"></span> Masuk dengan Google</button>

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('beritas.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('beritas.create') }}"> Buat Postingan Baru</a>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    
+
 @endsection
 @section('tabels')
     <thead>
@@ -31,18 +31,18 @@
         @foreach ($beritas as $berita)
         <tr>
             <td>{{ ++$i }}</td>
-            <td><img src="{{ Storage::url($berita->image) }}" height="75" width="75" alt="" /></td>  
+            <td><img src="{{ Storage::url($berita->image) }}" height="75" width="75" alt="" /></td>
             <td>{{ $berita->tgl_berita }}</td>
             <td>{{ $berita->title }}</td>
             <td>
                <form form action="{{ route('beritas.destroy',$berita->id) }}" method="POST">
-    
+
                     <a class="btn btn-primary" href="{{ route('beritas.edit',$berita->id) }}">Edit</a>
-                    
+
                     @csrf
                     @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger">Delete</button>
+
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </td>
         </tr>

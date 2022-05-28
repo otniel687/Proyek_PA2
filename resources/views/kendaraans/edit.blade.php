@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('kendaraans.index') }}" enctype="multipart/form-data"> Back</a>
+                <a class="btn btn-primary" href="{{ route('kendaraans.index') }}" enctype="multipart/form-data"> Kembali</a>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
     <form action="{{ route('kendaraans.update',$kendaraan->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-   
+
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -70,7 +70,7 @@
                         <option value="Gol VI B (Fuso 7 - 10 meter)">Gol VI B (Fuso 7 - 10 meter)</option>
                         <option value="Gol VII (Tronton)">Gol VII (Tronton)</option>
                         <option value="Gol VIII (Trailer)">Gol VIII (Trailer)</option>
-                    </select> 
+                    </select>
                     @error('description')
                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror

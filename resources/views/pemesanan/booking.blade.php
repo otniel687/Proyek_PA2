@@ -44,14 +44,14 @@
                                           </select>
                                       </div>
                                   </div>
-                              
+
                                   <div class="row mb-3">
                                       <div class="col">
                                           <label for="">Nama Pemesan</label>
                                           <input type="text" class="form-control" name="nama"  placeholder="Nama">
                                       </div>
                                   </div>
-                              
+
                                   <div class="row mb-3">
                                       <div class="col-lg-7">
                                           <label for="">Jenis Kendaraan</label>
@@ -72,7 +72,7 @@
                                           </select>
                                       </div>
                                   </div>
-                              
+
                                   <div class="row mb-3">
                                       <div class="col-lg-5" id="no_polisi" hidden>
                                           <label for="">No. Polisi</label>
@@ -95,7 +95,7 @@
                                   <tr>
                                       <td><input type="text" name="addMoreInputFields[0][nama]" placeholder="Enter " class="form-control" />
                                       </td>
-                                      
+
                                       <td><select name="addMoreInputFields[0][jk]" id="" class="center form-control">
                                               <option value="">Pilih</option>
                                               <option value="Laki-Laki">Laki-Laki</option>
@@ -106,7 +106,7 @@
                                       </td>
                                       <td><input type="text" name="addMoreInputFields[0][alamat]" placeholder="Enter " class="form-control" />
                                       </td>
-                                      <td><button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">Add </button></td>
+                                      <td><button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary">Tambah </button></td>
                                   </tr>
                               </table>
                                 @if (Route::has('login'))

@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('penumpangs.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('penumpangs.create') }}"> Buat Postingan Baru</a>
             </div>
         </div>
     </div>
-   
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -24,7 +24,7 @@
         <th>Jenis Kelamin</th>
         <th>Umur</th>
         <th>alamat</th>
-        <th width="120px">Action</th>
+        <th width="120px">Aksi</th>
     </tr>
 </thead>
 <tbody>
@@ -43,7 +43,7 @@
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </td>
         </tr>

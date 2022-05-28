@@ -103,7 +103,7 @@
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow mt-3">
                 <!-- Dropdown - User Information -->
-                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Logout </a>
+                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Keluar </a>
               </li>
             </ul>
           </nav>
@@ -171,7 +171,7 @@
                       <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem" src="img/undraw_posting_photo.svg" alt="..." />
                     </div>
                     <p>
-                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut : 
+                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut :
                     </p>
                     <p>1. Dapat mengelola data kendaraan pada navigasi "Kendaraan"</p>
                     <p>2. Dapat mengelola data penumpang pada navigasi “Penumpang”</p>

@@ -155,7 +155,7 @@
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow mt-3">
                 <!-- Dropdown - User Information -->
-                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Logout </a>
+                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Keluar </a>
               </li>
             </ul>
           </nav>
@@ -197,15 +197,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Ingin mengakhiri sesi ini?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Pilih "Keluar" jika anda ingin mengakhiri sesi anda saat ini</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <a class="btn btn-primary" href="{{route('logout')}}">Keluar</a>
           </div>
         </div>
       </div>
@@ -215,10 +215,10 @@
     <script src="{{asset('../assets/jquery/jquery.min.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('../assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  
+
     <!-- DataTables  & Plugins -->
     <script src="{{asset('../assets/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('../assets/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>

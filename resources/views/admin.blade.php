@@ -139,7 +139,7 @@
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow mt-3">
                 <!-- Dropdown - User Information -->
-                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Logout </a>
+                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Keluar </a>
               </li>
             </ul>
           </nav>
@@ -245,7 +245,7 @@
                       <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem" src="img/undraw_posting_photo.svg" alt="..." />
                     </div>
                     <p>
-                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut : 
+                      Selamat datang admin Selamat datang di Sistem informasi Pelabuhan Mulia Raja Napitupulu. Hal-hal yang anda dapatkan setelah masuk pada halaman admin website kami adalah sebagai berikut :
                     </p>
                     <p>1. Dapat mengelola data profil pada navigasi "Profil"</p>
                     <p>2. Dapat mengelola data kendaraan pada navigasi “Kendaraan”</p>
@@ -287,15 +287,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Ingin mengakhiri sesi ini?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Pilih "Keluar" jika anda ingin mengakhiri sesi anda saat ini</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <a class="btn btn-primary" href="{{route('logout')}}">Keluar</a>
           </div>
         </div>
       </div>

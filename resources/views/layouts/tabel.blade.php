@@ -139,7 +139,7 @@
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow mt-3">
                 <!-- Dropdown - User Information -->
-                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Logout </a>
+                <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#logoutModal"> Keluar </a>
               </li>
             </ul>
           </nav>
@@ -160,7 +160,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             @yield('content')
-                            
+
                             <table id="example2" class="table table-bordered table-striped">
                                 @yield('tabels')
                             </table>
@@ -168,7 +168,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 @yield('tabel')
                             </table>
-                            
+
                             @yield('links')
                         </div>
                         <!-- /.card-body -->
@@ -211,15 +211,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Ingin mengakhiri sesi ini?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Pilih "Keluar" jika anda ingin mengakhiri sesi anda saat ini</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <a class="btn btn-primary" href="{{route('logout')}}">Keluar</a>
           </div>
         </div>
       </div>

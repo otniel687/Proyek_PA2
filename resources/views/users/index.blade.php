@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('users.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('users.create') }}"> Buat Postingan Baru</a>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    
+
 @endsection
 @section('tabel')
     <thead>
@@ -44,7 +44,7 @@
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </td>
         </tr>

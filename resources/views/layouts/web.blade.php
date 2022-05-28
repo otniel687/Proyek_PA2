@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
     <!-- Favicons -->
     <link href="{{asset('../img/logo.png')}}" rel="icon" />
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="{{asset('https://fonts.googleapis.com')}}" />
     <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" crossorigin />
@@ -88,9 +88,9 @@
                   @if (Route::has('login'))
                   <div class="hidden fixed sm:block">
                     @auth
-                        <a class="nav-item btn btn-danger tombol" href="{{route('logout')}}">Log Out</a>
+                        <a class="nav-item btn btn-danger tombol" href="{{route('logout')}}">Keluar</a>
                     @else
-                        <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}">Login</a>
+                        <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}">Masuk</a>
                     @endif
                   </div>
                   @endif
@@ -138,16 +138,16 @@
       </section>
 
       @yield('content')
-      
+
     </main>
     <div class="footer-basic">
         <footer>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profile</a></li>
+                <li class="list-inline-item"><a href="{{asset('/tentang')}}">Profil</a></li>
                 <li class="list-inline-item"><a href="{{asset('/lokasi')}}">Lokasi</a></li>
                 <li class="list-inline-item"><a href="{{asset('/login')}}">Login</a></li>
                 <li class="list-inline-item"><a href="{{asset('/jadwal')}}">Jadwal</a></li>
-                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galery</a></li>
+                <li class="list-inline-item"><a href="{{asset('/galeri')}}">Galeri</a></li>
             </ul>
             <p class="copyright">Pelabuhan Mulia Raja Napitupulu © 2022</p>
         </footer>
@@ -167,7 +167,7 @@
     <script src="{{asset('assets/js/main.js')}}"></script>
     <script src="{{asset('https://kit.fontawesome.com/a81368914c.js')}}"></script>
     <script src="{{asset('./app.js')}}"></script>
-    
+
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none">
         <symbol id="close" viewBox="0 0 18 18">
           <path

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('mobil.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('mobil.create') }}"> Buat Posting Baru</a>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-danger">Hapus</button>
             </form>
         </td>
     </tr>

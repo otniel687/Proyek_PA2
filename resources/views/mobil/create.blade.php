@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('mobil.index') }}"> Back</a>
+                        <a class="btn btn-primary" href="{{ route('mobil.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -15,11 +15,11 @@
                         {{ session('status') }}
                     </div>
                 @endif
-                
+
                 <form action="{{ route('mobil.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                
-                    
+
+
                     <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
@@ -60,7 +60,7 @@
                                         <option value="Gol VI B (Fuso 7 - 10 meter)">Gol VI B (Fuso 7 - 10 meter)</option>
                                         <option value="Gol VII (Tronton)">Gol VII (Tronton)</option>
                                         <option value="Gol VIII (Trailer)">Gol VIII (Trailer)</option>
-                                    </select>    
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -73,7 +73,7 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
-                
+
                 </form>
             </div>
 @endsection

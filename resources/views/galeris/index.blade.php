@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('galeris.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('galeris.create') }}"> Buat Postingan Baru</a>
             </div>
         </div>
     </div>
