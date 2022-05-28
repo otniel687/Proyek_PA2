@@ -53,14 +53,11 @@
                   <div class="form-group">
                     <div class="d-block">
                     <label class="form-control-placeholder" for="password">Kata Sandi</label>
-<<<<<<< Updated upstream
                       <div class="float-right">
                         <!-- <a href="" class="text-small">
                           Lupa Password?
                         </a> -->
                       </div>
-=======
->>>>>>> Stashed changes
                     </div>
                     <input id="password-field" type="password" class="form-control" id="inputPassword" name="password" tabindex="2" required autocomplete="current-password">
                         @if($errors->has('password'))
