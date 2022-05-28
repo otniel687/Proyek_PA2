@@ -1,6 +1,6 @@
 @extends('layouts.web')
-@section('title', 'Booking | Pelabuhan Mulia Raja Napitupulu')
-@section('breadcrumb', 'Booking')
+@section('title', 'Pesan | Pelabuhan Mulia Raja Napitupulu')
+@section('breadcrumb', 'Pesan')
 @section('judul', 'Pesan')
 @section('content')
         <div class="container">

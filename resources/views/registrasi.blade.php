@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Register &mdash; Pelabuhan</title>
+  <title>Buat Akun &mdash; Pelabuhan</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Register</h4></div>
+              <div class="card-header"><h2>Buat Akun</h2></div>
 
               <div class="card-body">
                 <form method="POST" action="{{ route('simpanregister') }}">
@@ -43,7 +43,7 @@
                   @enderror
                 </div>
                 <div class="form-group mb-3">
-                  <label class="label" for="username">Username</label>
+                  <label class="label" for="username">Nama Pengguna</label>
                 <input id="username" type="text" class="form-control @error('email') is-invalid @enderror" name="username" value="{{ old('email') }}" required autocomplete="username">
                   @error('username')
                       <span class="invalid-feedback" role="alert">
@@ -62,7 +62,7 @@
                  </div>
                  <div class="row">
                    <div class="form-group mb-3 col-6">
-                  <label class="label" for="password">Password</label>
+                  <label class="label" for="password">Kata Sandi</label>
                   <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                   @error('password')
                       <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                   @enderror
                   </div>
                     <div class="form-group col-6">
-                      <label for="password-confirm" class="d-block">Password Confirmation</label>
+                      <label for="password-confirm" class="d-block">Konfirmasi Kata Sandi</label>
                       <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
                  </div>
@@ -88,6 +88,9 @@
                   </div>
                 </form>
               </div>
+            </div>
+            <div class="mt-2 text-muted text-center">
+              Sudah punya akun sebelumnya? <a href="{{ route('login') }}">Masuk</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Pelabuhan Mulia Raja Napitupulu 2022

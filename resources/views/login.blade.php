@@ -28,7 +28,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Login</h4></div>
+              <div class="card-header"><h2>Masuk</h2></div>
 
               <div class="card-body">
                 <form method="POST" action="{{url('proses_login')}}" method="POST" id="logForm"  class="needs-validation" >
@@ -43,7 +43,7 @@
                   </div>
                   @enderror
                   <div class="form-group">
-                    <label class="form-control-placeholder" for="username">Username</label>
+                    <label class="form-control-placeholder" for="username">Nama Pengguna</label>
                     <input type="text" name="username" id="inputEmailAddress" class="form-control" required autofocus/>
                         @if($errors->has('username'))
                         <span class="error">{{ $errors->first('username') }}</span>
@@ -52,7 +52,7 @@
 
                   <div class="form-group">
                     <div class="d-block">
-                    <label class="form-control-placeholder" for="password">Password</label>
+                    <label class="form-control-placeholder" for="password">Kata Sandi</label>
                       <div class="float-right">
                         <a href="" class="text-small">
                           Lupa Password?
@@ -66,7 +66,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Masuk</button>
                   </div>
                   <!-- <div class="form-group d-md-flex">
                     <div class="w-50 text-left">
@@ -75,7 +75,7 @@
                   </div> -->
                 </form>
                 <div class="text-center mt-2 mb-3">
-                  <div class="text-job text-muted">Login With Social</div>
+                  <div class="text-job text-muted">Masuk dengan lain</div>
                 </div>
                 <!-- <div class="form-group">
                     <button type="submit" class="form-control btn btn-secondary rounded submit px-3"><span class="fab fa-google"></span> Masuk dengan Google</button>
@@ -91,7 +91,7 @@
             </div>
             </div>
             <div class="mt-2 text-muted text-center">
-              Belum punya akun sebelumnya? <a href="{{ route('register') }}">Register</a>
+              Belum punya akun sebelumnya? <a href="{{ route('register') }}">Daftar Akun</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Pelabuhan Mulia Raja Napitupulu 2022
