@@ -74,12 +74,8 @@
                     <li><a class="dropdown-item" href="{{asset('/booking')}}">Pesan</a></li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Publikasi </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{asset('/berita')}}">Berita</a></li>
-                    <li><a class="dropdown-item" href="{{asset('/pengumuman')}}">Pengumuman</a></li>
-                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{asset('/berita')}}">Berita</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{asset('/galeri')}}">Galeri</a>

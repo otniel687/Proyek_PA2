@@ -84,12 +84,8 @@
                     <li><a class="dropdown-item" href="{{asset('/booking')}}">Pesan</a></li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Publikasi </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{asset('/berita')}}">Berita</a></li>
-                    <li><a class="dropdown-item" href="{{asset('/pengumuman')}}">Pengumuman</a></li>
-                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{asset('/berita')}}">Berita</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{asset('/galeri')}}">Galeri</a>
@@ -115,8 +111,8 @@
       <header class="py-5 border-bottom bgimg header-judul mb-4">
         <div class="container ">
           <div class="row ">
-            <div class="col-lg-7 bg-hover1">
-              <div class="text-start my-5 ">
+            <div class="col-lg-7 bg-hover1" data-aos="fade-up">
+              <div class="text-start my-5 " >
                 <h1 class="fw-bolder ">{{ $home2->title }}</h1>
                 <p class="lead mb-0">
                   {{ $home2->content}}
@@ -129,7 +125,7 @@
 
       <!-- Page content-->
       <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <!-- Side widgets-->
           <div class="col-lg-5">
             <!-- Side widget-->
@@ -160,7 +156,7 @@
 
       <!-- Page content-->
       <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <!-- Blog entries-->
           <div class="col-lg-8">
             <div class="row">
@@ -205,7 +201,6 @@
               </div>
             </div>
             @endforeach
-
           </div>
           <!-- Side widgets-->
           <div class="col-lg-4">

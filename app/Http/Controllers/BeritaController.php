@@ -46,12 +46,14 @@ class BeritaController extends Controller
             'tgl_berita' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:20048',
             'description' => 'required',
+            'sumber' => 'required',
         ]);
         $path = $request->file('image')->store('public/images');
         $berita = new Berita();
         $berita->title = $request->title;
         $berita->tgl_berita = $request->tgl_berita;
         $berita->description = $request->description;
+        $berita->sumber = $request->sumber;
         $berita->image = $path;
         $berita->save();
      
@@ -94,6 +96,7 @@ class BeritaController extends Controller
             'title' => 'required',
             'tgl_berita' => 'required',
             'description' => 'required',
+            'sumber' => 'required',
         ]);
         
         $berita = Berita::find($id);
@@ -107,6 +110,7 @@ class BeritaController extends Controller
         $berita->title = $request->title;
         $berita->tgl_berita = $request->tgl_berita;
         $berita->description = $request->description;
+        $berita->sumber = $request->sumber;
         $berita->save();
     
         return redirect()->route('beritas.index')

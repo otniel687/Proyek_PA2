@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('tgl_berita');
             $table->string('image');
             $table->text('description');
+            $table->string('sumber');
             $table->timestamps();
         });
     }

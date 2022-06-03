@@ -13,7 +13,7 @@ class PenggunaController extends Controller
 
     public function index()
     {
-        $berita = Berita::orderBy('id', 'asc')->limit(4)->get();
+        $berita = Berita::orderBy('id', 'desc')->limit(3)->get();
         $informasi = Informasi::orderBy('id', 'desc')->limit(1)->get();
         $home1 = Profile::find(3);
         $home2 = Profile::find(4);

@@ -33,14 +33,14 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Tanggal Dibuat :</strong>
-                <input type="date" name="tgl_berita" class="form-control" value="{{ $berita->tgl_berita }}">
-               @error('title')
-                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-               @enderror
+                <div class="form-group">
+                    <strong>Tanggal Dibuat :</strong>
+                    <input type="date" name="tgl_berita" class="form-control" value="{{ $berita->tgl_berita }}">
+                @error('title')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                @enderror
+                </div>
             </div>
-        </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Post Description:</strong>
@@ -65,6 +65,15 @@
 
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Post Title:</strong>
+                    <input type="text" name="sumber" value="{{ $berita->sumber }}" class="form-control" placeholder="Post sumber">
+                    @error('sumber')
+                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
 
               <button type="submit" class="btn btn-primary ml-3">Submit</button>
 

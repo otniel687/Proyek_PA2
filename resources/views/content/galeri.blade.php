@@ -15,7 +15,7 @@ Twitter: https://twitter.com/supahfunk
 Codepen: https://codepen.io/supah/
 
 -->
-        <div class="gallery">
+        <div class="gallery" data-aos="fade-up">
            @foreach ($galeris as $galeri)
           <figure>
             <img src="{{ Storage::url($galeri->image) }}" alt="" />
