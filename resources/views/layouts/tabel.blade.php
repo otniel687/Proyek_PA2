@@ -129,7 +129,7 @@
             <!-- Topbar Logo -->
             <ul class="navbar-nav mr-lg-2">
               <li class="nav-item nav-profile dropdown">
-                  <img src="img/logo.png" alt="profile" width="65px" />
+                  <img src="{{asset('img/logo.png')}}" alt="profile" width="65px" />
                   <span class="nav-profile-name">Pelabuhan Mulia Raja Napitupulu</span>
               </li>
             </ul>
@@ -191,7 +191,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Pelabuhan Mulia Raja Napitupulu 2021</span>
+              <span>Copyright &copy; Pelabuhan Mulia Raja Napitupulu 2022</span>
             </div>
           </div>
         </footer>

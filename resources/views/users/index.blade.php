@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('users.create') }}"> Buat Postingan Baru</a>
+                <a class="btn btn-success" href="{{ route('users.create') }}"> Tambah Petugas Baru</a>
             </div>
         </div>
     </div>
@@ -17,15 +17,14 @@
     @endif
 
 @endsection
-@section('tabel')
+@section('tabels')
     <thead>
         <tr>
         <th>No</th>
         <th>Nama</th>
         <th>Username</th>
-        <th>Email</th>
         <th>Role</th>
-        <th width="120px">Action</th>
+        <th width="280px">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -34,12 +33,11 @@
             <td>{{ ++$i }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->username }}</td>
-            <td>{{ $user->email }}</td>
             <td>{{ $user->level }}</td>
             <td>
                 <form action="{{ route('users.destroy', $user->id) }}" method="POST">
 
-                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Ubah Password</a>
 
                     @csrf
                     @method('DELETE')

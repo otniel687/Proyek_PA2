@@ -15,6 +15,8 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="css/authstyle.css">
   <link rel="stylesheet" href="css/components.css">
+  {{-- <link rel="stylesheet" href="{{asset('css/style_login.css')}} " /> --}}
+
 </head>
 
 <body>
@@ -59,10 +61,11 @@
                         </a> -->
                       </div>
                     </div>
-                    <input id="password-field" type="password" class="form-control" id="inputPassword" name="password" tabindex="2" required autocomplete="current-password">
-                        @if($errors->has('password'))
-                        <span class="error">{{ $errors->first('password') }}</span>
-                        @endif
+                    <input id="password-field" type="password" class="form-control" id="inputPassword" name="password" required />
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    @if($errors->has('password'))
+                    <span class="error">{{ $errors->first('password') }}</span>
+                    @endif
                   </div>
 
                   <div class="form-group">

@@ -55,11 +55,11 @@
 </head>
      <body>
     <main>
-      <div class="big-wrapper light">
+     <div class="big-wrapper light">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
+          <div class="container">
             <div class="logo-1">
-              <img src="./img/logo.png" alt="Logo" />
+              <img src="{{asset('../img/logo.png')}}" alt="Logo" />
               <p>Pelabuhan Mulia Raja Napitupulu</p>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="{{asset('/')}}">Beranda</a>
                 </li>
-               <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Profil </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{asset('/tentang')}}">Tentang</a></li>
@@ -156,7 +156,7 @@
 
       <!-- Page content-->
       <div class="container">
-        <div class="row" data-aos="fade-up">
+        <div class="row" >
           <!-- Blog entries-->
           <div class="col-lg-8">
             <div class="row">

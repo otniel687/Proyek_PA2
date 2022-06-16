@@ -22,10 +22,10 @@
         @method('PUT')
 
          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
                 <div class="form-group">
-                    <strong>Tanggal:</strong>
-                    <input type="text" class="form-control text-start" name="name" value="{{ $user->name }}">
+                    <strong>Nama:</strong>
+                    <input type="text" class="form-control text-start" name="name" disabled value="{{ $user->name }}">
                     @error('name')
                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
@@ -33,18 +33,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Waktu:</strong>
-                    <input type="text" class="form-control text-start" name="username" value="{{ $user->username }}">
+                    <strong>Username:</strong>
+                    <input type="text" class="form-control text-start" name="username" disabled value="{{ $user->username }}">
                     @error('username')
-                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nama Pemilik:</strong>
-                    <input type="text" class="form-control text-start" name="email" value="{{ $user->email }}">
-                    @error('email')
                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
                 </div>
@@ -54,7 +45,6 @@
                 <div class="form-group mb-3 col-6">
                 <label class="label" for="password">Kata Sandi</label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

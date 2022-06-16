@@ -5,7 +5,7 @@
 <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('informasis.create') }}"> Buat Postingan Baru</a>
+                <a class="btn btn-success" href="{{ route('informasis.create') }}"> Buat Pengumuman Terbaru Baru</a>
             </div>
         </div>
     </div>

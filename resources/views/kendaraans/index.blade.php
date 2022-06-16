@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('kendaraans.create') }}"> Buat Postingan Baru</a>
+                <a class="btn btn-success" href="{{ route('kendaraans.create') }}"> Buat Data Baru</a>
             </div>
         </div>
     </div>
