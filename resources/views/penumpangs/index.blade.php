@@ -9,7 +9,6 @@
             </div>
         </div>
     </div>
-
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -42,9 +41,27 @@
 
                     @csrf
                     @method('DELETE')
-
-                    <button type="submit" class="btn btn-danger">Hapus</button>
+                    <a class="dropdown-item text-info" href="#" data-toggle="modal" data-target="#delete"> Keluar </a>
+                    <!-- Logout Modal-->
+                    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ingin mengakhiri sesi ini?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Pilih "Keluar" jika anda ingin mengakhiri sesi anda saat ini</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-danger">Hapus</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
+                
             </td>
         </tr>
     @endforeach
